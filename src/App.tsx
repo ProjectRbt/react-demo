@@ -18,6 +18,7 @@ function App() {
         <div>
             <h1>欢迎来到我的应用</h1>
             <MyButton/>
+            <MyButton/>
             <br/>
             {content}
             <br/>
