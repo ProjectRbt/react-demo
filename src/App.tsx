@@ -2,6 +2,7 @@ import './App.css'
 import MyButton from "./components/my-button/MyButton.tsx";
 import User from "./components/user/User.tsx";
 import MyUser from "./components/user/MyUser.tsx";
+import List from "./components/list/List.tsx";
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
             <MyButton/>
             <br/>
             {content}
+            <br/>
+            <List/>
         </div>
     )
 }
