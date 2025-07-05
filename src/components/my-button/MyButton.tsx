@@ -1,17 +1,15 @@
 import "./MyButton.css"
-import {useState} from "react";
 
-export default function MyButton(){
+interface MyButtonProps {
+    count:number
+    setCount:()=>void
+}
 
-    const [count,setCount] = useState(0)
 
-    const handleChick = ()=>{
-        setCount(count+1)
-    }
-
+export default function MyButton({count,setCount}:MyButtonProps){
 
     return (
-        <button onClick={handleChick}>我被点击了 {count} 次了</button>
+        <button onClick={setCount}>我被点击了 {count} 次了</button>
     )
 }
 

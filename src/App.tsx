@@ -1,28 +1,18 @@
 import './App.css'
 import MyButton from "./components/my-button/MyButton.tsx";
-import User from "./components/user/User.tsx";
-import MyUser from "./components/user/MyUser.tsx";
-import List from "./components/list/List.tsx";
+import {useState} from "react";
 
 function App() {
 
-    const isUser = true
-    let content
-    if (isUser){
-        content = <MyUser/>
-    }else {
-        content = <User/>
-    }
+
+    const [count,setCount] = useState(0)
 
     return (
         <div>
-            <h1>欢迎来到我的应用</h1>
-            <MyButton/>
-            <MyButton/>
+            <h1>共同更新的计数器</h1>
+            <MyButton count={count} setCount={()=> setCount(count+1)}/>
             <br/>
-            {content}
-            <br/>
-            <List/>
+            <MyButton count={count} setCount={()=> setCount(count+1)}/>
         </div>
     )
 }
